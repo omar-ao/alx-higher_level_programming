@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stdio.h>
 
 /**
  * is_palindrome - Checks if a singly linked list is a palindrome
@@ -11,10 +12,12 @@ int is_palindrome(listint_t **head)
 	listint_t *reverse, *origin, *current, *next;
 	listint_t *prev = NULL;
 
-	current = origin = *head;
-
-	if (head == NULL || (*head)->next == NULL)
+	if (*head == NULL)
 		return (1);
+	else if ((*head)->next == NULL)
+		return (1);
+
+	current = origin = *head;
 
 	while (current != NULL)
 	{
@@ -29,6 +32,7 @@ int is_palindrome(listint_t **head)
 	{
 		if (reverse->n != origin->n)
 			return (0);
+		printf("%d\n%d\n", reverse->n, origin->n);
 		reverse = reverse->next;
 		origin = origin->next;
 	}
