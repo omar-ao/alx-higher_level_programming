@@ -17,7 +17,8 @@ int is_palindrome(listint_t **head)
 	else if ((*head)->next == NULL)
 		return (1);
 
-	current = origin = *head;
+	current = *head;
+	origin = *head;
 
 	while (current != NULL)
 	{
@@ -28,7 +29,7 @@ int is_palindrome(listint_t **head)
 	}
 	reverse = prev;
 
-	while (reverse != NULL && origin == NULL)
+	while (reverse != NULL && origin != NULL)
 	{
 		if (reverse->n != origin->n)
 			return (0);
