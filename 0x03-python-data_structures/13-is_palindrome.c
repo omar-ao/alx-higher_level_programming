@@ -33,7 +33,6 @@ int is_palindrome(listint_t **head)
 	{
 		if (reverse->n != origin->n)
 			return (0);
-		printf("%d\n%d\n", reverse->n, origin->n);
 		reverse = reverse->next;
 		origin = origin->next;
 	}
