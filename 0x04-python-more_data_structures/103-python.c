@@ -40,7 +40,11 @@ void print_python_bytes(PyObject *p)
 		bytes = (size < 10) ? size + 1 : 10;
 		printf("  first %d bytes: ", bytes);
 		for (i = 0; i < bytes ; i++)
-			printf("%02x ", s[i] & 0xff);
+		{
+			printf("%02x", s[i] & 0xff);
+			if ((i + 1) != bytes)
+				printf(" ");
+		}
 		printf("\n");
 	}
 	else
