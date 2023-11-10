@@ -1,5 +1,6 @@
 #include "Python.h"
 
+void print_python_bytes(PyObject *p);
 /**
  * print_python_list - Prints some basic infor about python lists
  *
@@ -17,6 +18,10 @@ void print_python_list(PyObject *p)
 	for (i = 0; i < (int) pp->ob_base.ob_size; i++)
 	{
 		printf("Element %d: %s\n", i, pp->ob_item[i]->ob_type->tp_name);
+		if (PyBytes_Check(pp->ob_item[i]))
+		{
+			print_python_bytes(pp->ob_item[i]);
+		}
 	}
 }
 
