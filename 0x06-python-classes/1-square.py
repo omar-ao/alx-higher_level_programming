@@ -5,12 +5,14 @@
 class Square:
     """class Square that defines a square by: (based on 0-square.py)
 
-    Private instance attribute: size
+    Attributes:
+        size: size of a square
     """
     def __init__(self, size):
         """Creates a new instance of the class square
         
-        arguments: size
+        Args:
+            size: size of a square
         """
         self.__size = size
     
