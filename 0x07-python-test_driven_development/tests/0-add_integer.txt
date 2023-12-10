@@ -40,6 +40,11 @@ Adding float to negative
 	>>> add_integer(100.3, -2)
 	98
 
+Float overflow
+
+	>>> add_integer(10.5)
+	108
+
 Trying to add int to str
 
 	>>> add_integer(4, "School")
@@ -51,3 +56,10 @@ Trying to add int to str
 	Traceback (most recent call last):
 	...
         TypeError: a must be an integer
+
+Trying to add float NaN to int
+
+	>>> add_integer(float('NaN'))
+	Traceback (most recent call last):
+	...
+	ValueError: cannot convert float NaN to integer
