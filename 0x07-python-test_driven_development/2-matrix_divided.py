@@ -11,6 +11,7 @@ def matrix_divided(matrix, div):
     >>> matrix_divided([[1, 2, 3], [4, 5, 6]], 3)
     [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
     """
+
     is_matrix = True
     for element in matrix:
         if not isinstance(element, list):

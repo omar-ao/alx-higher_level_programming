@@ -60,4 +60,17 @@ div can't be equal to 0
 	Traceback (most recent call last):
 	...
 	ZeroDivisionError: division by zero
-	
+
+Test: Missing one argument
+
+	>>> matrix_divided(matrix)
+	Traceback (most recent call last):
+	...
+	TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+Test: Missing two argument
+
+	>>> matrix_divided()
+	Traceback (most recent call last):
+	...
+	TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
