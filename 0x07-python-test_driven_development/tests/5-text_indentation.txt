@@ -1,0 +1,48 @@
+The ``5-text_indentation`` module
+=================================
+
+Usage examples
+--------------
+
+Test0: Import function
+
+	>>> text_indentation = __import__("5-text_indentation").text_indentation
+
+Test1: Module documentation exists
+
+	>>> m_doc = __import__("5-text_indentation").__doc__
+	>>> len(m_doc) > 1
+	True
+
+Test2: Function documentation exists
+
+	>>> f_doc = text_indentation.__doc__
+	>>> len(f_doc) > 1
+	True
+
+Test3: Prints as expected
+
+	>>> text = "This? is, TDD:"
+	>>> text_indentation(text)
+	This?
+	<BLANKLINE>
+	is, TDD:
+	<BLANKLINE>
+
+Test5: No space at the beginning
+
+	>>> text = " This? is. TDD: "
+	>>> text_indentation(text)
+	This?
+	<BLANKLINE>
+	is.
+	<BLANKLINE>
+	TDD:
+	<BLANKLINE>
+
+Test6: No arguments
+
+	>>> text_indentation()	
+	Traceback (most recent call last):
+	...
+	TypeError: text_indentation() missing 1 required positional argument: 'text'
