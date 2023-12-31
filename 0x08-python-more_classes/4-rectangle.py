@@ -71,4 +71,3 @@ class Rectangle:
         """Return string representation of the rectangle
         to be abel to recreate a new instance"""
         return f"Rectangle({self.width}, {self.height})"
-
