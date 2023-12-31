@@ -9,6 +9,7 @@ class Rectangle:
     """A class Rectangle that defines a rectangle by:
         (based on 5-rectangle.py)"""
     number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         """Inits Rectangle.
 
