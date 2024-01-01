@@ -100,10 +100,6 @@ class Rectangle:
     def square(cls, size=0):
         """Returns a new Rectangle instance with width == height == size"""
         width = height = size
-        if not isinstance(height, int):
-            raise TypeError("height must be an integer")
-        if height < 0:
-            raise ValueError("height must >= 0")
         if not isinstance(width, int):
             raise TypeError("width must be an integer")
         if width < 0:
