@@ -6,6 +6,9 @@ It defines one function add_attribute
 
 
 def add_attribute(obj, name, value):
+    """
+    Adds attribute to an object
+    """
     if '__dict__' not in dir(obj):
         raise TypeError("can't add new attribute")
     obj.__setattr__(name, value)
