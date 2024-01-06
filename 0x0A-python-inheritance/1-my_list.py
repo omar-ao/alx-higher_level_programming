@@ -11,7 +11,7 @@ Examples
 
 
 class My_list(list):
-    """Defines My_list which inherits from list
+    """A class My_list defines my_list
     """
 
     def print_sorted(self):
