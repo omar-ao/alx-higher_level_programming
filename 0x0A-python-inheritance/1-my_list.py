@@ -12,6 +12,7 @@ Examples
 
 class My_list(list):
     """A class My_list defines my_list
+    My_list inherits from list class
     """
 
     def print_sorted(self):
