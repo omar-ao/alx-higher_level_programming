@@ -1,0 +1,39 @@
+The ``1-my_list`` module
+========================
+
+Using ``My_list``
+-----------------
+
+Impot the module
+>>> my_list = __import__("1-my_list")
+
+Module documentation present
+>>> m_doc = my_list.__doc__
+>>> len(m_doc) > 1
+True
+
+Class documentation present
+>>> c_doc = my_list.My_list.__doc__
+>>> len(c_doc) > 1
+True
+
+Method documentation present
+>>> md_doc = my_list.My_list.print_sorted.__doc__
+>>> len(md_doc) > 1
+True
+
+Add numbers to the list
+>>> list1 = my_list.My_list()
+>>> list1.append(1)
+>>> list1.append(8)
+>>> list1.append(2)
+>>> list1.append(9)
+>>> list1.append(5)
+
+Print the numbers
+>>> print(list1)
+[1, 8, 2, 9, 5]
+
+Print the numbers sorted using print_sorted method
+>>> list1.print_sorted()
+[1, 2, 5, 8, 9]
