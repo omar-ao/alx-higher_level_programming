@@ -13,17 +13,17 @@ Module documentation present
 True
 
 Class documentation present
->>> c_doc = my_list.My_list.__doc__
+>>> c_doc = my_list.MyList.__doc__
 >>> len(c_doc) > 1
 True
 
 Method documentation present
->>> md_doc = my_list.My_list.print_sorted.__doc__
+>>> md_doc = my_list.MyList.print_sorted.__doc__
 >>> len(md_doc) > 1
 True
 
 Add numbers to the list
->>> list1 = my_list.My_list()
+>>> list1 = my_list.MyList()
 >>> list1.append(1)
 >>> list1.append(8)
 >>> list1.append(2)
