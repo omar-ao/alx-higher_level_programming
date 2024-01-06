@@ -14,7 +14,6 @@ class Rectangle(BaseGeometry):
     def __init__(self, width, height):
         """
         Instatiates Rectangle object
-        
         args:
         width (int): Width
         height (int) Height of the geometry
