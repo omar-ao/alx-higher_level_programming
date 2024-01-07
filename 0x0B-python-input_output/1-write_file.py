@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """The ``1-write_file`` module
 This module contains one function, write_file
 """
