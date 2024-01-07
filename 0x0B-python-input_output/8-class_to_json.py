@@ -4,11 +4,8 @@ It contains one function, class_to_json
 """
 
 
-import json
-
-
 def class_to_json(obj):
     """
     Returns the dictionary description of the object ``obj``
     """
-    return json.dumps(obj.__dict__)
+    return obj.__dict__
