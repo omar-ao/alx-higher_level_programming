@@ -30,6 +30,6 @@ class Student:
             attrs: A list of strings
         """
         obj_dict = self.__dict__
-        if attrs:
+        if attrs is not None:
             return {attr: obj_dict[attr] for attr in attrs if attr in obj_dict}
         return obj_dict
