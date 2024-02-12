@@ -2,7 +2,7 @@
 
 const { argv } = require('node:process');
 
-const len = argv.length - 2;
+const len = argv.length;
 
 if (len === 0) {
   console.log('No argument');
