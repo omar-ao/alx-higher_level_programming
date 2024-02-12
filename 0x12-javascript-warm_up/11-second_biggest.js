@@ -3,23 +3,11 @@
 const args = process.argv;
 
 const numbers = args.slice(2);
+const len = numbers.length;
 
-if (numbers.length === 0) {
+if (len === 0 || len === 1) {
   console.log(0);
   process.exit(1);
 }
 
-if (numbers.length === 1) {
-  console.log(1);
-  process.exit(1);
-}
-
-let max = numbers[0];
-for (const num of numbers) {
-  if (max < num) {
-    max = num;
-  }
-}
-
-console.log(max);
-process.exit(1);
+console.log(numbers.sort().slice(-2, -1)[0]);
