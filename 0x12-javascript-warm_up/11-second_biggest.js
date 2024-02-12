@@ -1,15 +1,15 @@
 #!/usr/bin/node
 
-const arr = process.argv;
+const args = process.argv;
 
-const args = arr.slice(2);
-const len = args.length;
+const numbers = args.slice(2);
+const len = numbers.length;
 
 if (len > 1) {
-  const numbers = args.map(function (n) {
-    return parseInt(n);
+  numbers.sort(function(a, b) {
+    return a - b;
   });
-  console.log(numbers.sort().slice(-2, -1)[0]);
+  console.log(numbers.slice(-2, -1)[0]);
 } else {
   console.log(0);
 }
