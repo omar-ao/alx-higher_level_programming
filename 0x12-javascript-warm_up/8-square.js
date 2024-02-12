@@ -1,8 +1,9 @@
 #!/usr/bin/node
 
 const args = process.argv;
+const num = args[2];
 
-if (!args[2]) {
+if (!num || isNaN(num)) {
   console.log('Missing size');
 }
 
