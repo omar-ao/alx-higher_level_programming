@@ -6,11 +6,11 @@ Usage:
     ./1-filter_states.py <username> <passowrd> <database name>
 """
 
-import MySQLdb
-import sys
-
 
 if __name__ == '__main__':
+    import MySQLdb
+    import sys
+
     user, pwd, db = sys.argv[1:]
     host, port = 'localhost', 3306
 
