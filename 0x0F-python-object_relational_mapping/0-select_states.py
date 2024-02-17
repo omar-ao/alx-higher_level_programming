@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""script that lists all states from the
+database hbtn_0e_usa"""
 
 import sys
 import MySQLdb
@@ -12,6 +14,7 @@ cur = conn.cursor()
 
 
 def get_all_states():
+    """gets all states in asceding order"""
     cur.execute("SELECT * FROM states ORDER BY id ASC")
     rows = cur.fetchall()
     for row in rows:
