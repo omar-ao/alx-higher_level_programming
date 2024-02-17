@@ -1,6 +1,11 @@
 #!/usr/bin/python3
+
 """script that lists all states from the
-database hbtn_0e_usa"""
+database hbtn_0e_usa
+
+Usage:
+    ./0-select_states.py <username> <passowrd> <database name>
+"""
 
 import sys
 import MySQLdb
