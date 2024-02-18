@@ -24,5 +24,9 @@ if __name__ == "__main__":
              "ORDER BY cities.id ")
     cur.execute(query, (state,))
     cities = cur.fetchall()
+<<<<<<< HEAD
     cities = [city for element in cities for city in element]
+=======
+    cities = [city for tuple_ in cities for city in tuple_]
+>>>>>>> 9557ecbd6fb582ffcd2ddbb16e0214717a1f4a4c
     print(", ".join(cities))
