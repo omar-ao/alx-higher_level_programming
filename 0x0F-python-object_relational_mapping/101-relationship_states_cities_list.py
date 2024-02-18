@@ -8,8 +8,8 @@ import sys
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, session
-from model_state import Base, State
-from model_city import City
+from relationship_state import Base, State
+from relationship_city import City
 
 
 if __name__ == '__main__':
@@ -27,4 +27,4 @@ if __name__ == '__main__':
     for state in states:
         print("{}: {}".format(state.id, state.name))
         for city in state.cities:
-            print("\t{}: {}".format(city.id, city.name))
+            print("    {}: {}".format(city.id, city.name))
