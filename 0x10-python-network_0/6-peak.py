@@ -12,4 +12,5 @@ def find_peak(numbers):
     """Finds the peak in a list of unsorted integers"""
     if not numbers:
         return None
-    return max(numbers)
+    numbers.sort()
+    return numbers[-1]
