@@ -14,11 +14,11 @@ if __name__ == '__main__':
         q = sys.argv[1]
 
     r = requests.post(url, data={'q': q})
-    try:
+    if 'application/json' in r.headers.values():
         result = r.json()
         if result:
             print('[{}] {}'.format(result.get('id'), result.get('name')))
         else:
             print('No result')
-    except requests.exceptions.JSONDecodeError:
+    else:
         print('Not a valid JSON')
