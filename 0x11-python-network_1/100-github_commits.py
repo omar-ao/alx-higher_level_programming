@@ -16,7 +16,7 @@ if __name__ == '__main__':
     url = 'https://api.github.com/repos/{}/{}/commits'.format(repo, owner)
     r = requests.get(url)
     commits = r.json()
-    newest = commits[:10]
+    newest = commits[-10:]
     for commit in newest:
         sha = commit.get('sha')
         name = commit.get('commit').get('author').get('name')
