@@ -13,10 +13,13 @@ import sys
 if __name__ == '__main__':
     repo = sys.argv[1]
     owner = sys.argv[2]
-    url = 'https://api.github.com/repos/{}/{}/commits'.format(repo, owner)
+    url = 'https://api.github.com/repos/{}/{}/commits'.format(owner, repo)
     r = requests.get(url)
     commits = r.json()
-    newest = commits[-10:]
+    if len(commits) > 10:
+        newest = commits[:10]
+    else:
+        newest = commits
     for commit in newest:
         sha = commit.get('sha')
         name = commit.get('commit').get('author').get('name')
